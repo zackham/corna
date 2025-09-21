@@ -1,0 +1,31 @@
+[package]
+name = "corna"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+log = "0.4"
+env_logger = "0.11"
+time = { version = "0.3", features = ["local-offset"] }
+rand = "0.8"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+dirs = "5"
+libc = "0.2"
+
+# Wayland
+wayland-client = "0.31"
+wayland-protocols = { version = "0.31", features = ["client"] }
+wayland-protocols-wlr = { version = "0.2", features = ["client"] }
+wayland-egl = "0.32"
+wayland-cursor = "0.31"
+
+# EGL and GL
+khronos-egl = { version = "4.1", features = ["static"] }
+glow = "0.13"
+bytemuck = { version = "1", features = ["derive"] }
+
+# Event loop
+calloop = "0.12"
+xkbcommon = "0.7"
